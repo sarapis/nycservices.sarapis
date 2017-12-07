@@ -63,22 +63,24 @@
                                     <div class="panel">
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-md-8">
-                                                    <form action="/services_find" method="POST" class="hidden-sm hidden-xs" style="display: block !important; padding-bottom: 30px;padding: 5px; ">
+                                                <div class="col-md-8 plxl">
+                                                    <form action="/services_find" method="POST" class="hidden-sm hidden-xs" style="display: block !important; padding-bottom: 30px;padding: 5px; width: 33%;">
                                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                         <div class="input-icon right text-white"><a href=""><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control text-black" name="find"/></div>
                                                     </form>
-                                                    <h3>Category</h3>
-                                                    <ul id="tree1">
-                                                        @foreach($taxonomies as $taxonomy)
-                                                            <li>
-                                                                <a href="category_{{$taxonomy->taxonomy_id}}">{{$taxonomy->name}}</a>
-                                                                @if(count($taxonomy->childs))
-                                                                    @include('layouts.manageChild',['childs' => $taxonomy->childs])
-                                                                @endif
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
+                                                    <div class="row pal">
+                                                        <h3>Category</h3>
+                                                        <ul id="tree1">
+                                                            @foreach($taxonomies as $taxonomy)
+                                                                <li>
+                                                                    <a href="category_{{$taxonomy->taxonomy_id}}">{{$taxonomy->name}}</a>
+                                                                    @if(count($taxonomy->childs))
+                                                                        @include('layouts.manageChild',['childs' => $taxonomy->childs])
+                                                                    @endif
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div id="mymap" style="width: 100%;"></div>
@@ -108,4 +110,30 @@
 </div>
 @include('layouts.script')
 <script src="../js/treeview.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5XHJ6oNL9-qh0XsL0G74y1xbcxNGkSxw&callback=initMap"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+ <script type="text/javascript">
+
+    var locations = <?php print_r(json_encode($location_map)) ?>;
+
+    var mymap = new GMaps({
+      el: '#mymap',
+      lat: 40.712722,
+      lng: -74.006058,
+      zoom:10
+    });
+
+    $.each( locations, function( index, value ){
+        mymap.addMarker({
+          lat: value.latitude,
+          lng: value.longitude,
+          title: value.name,
+
+        infoWindow: {
+            content: (value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code)
+        }
+        });
+   });
+
+  </script>
 

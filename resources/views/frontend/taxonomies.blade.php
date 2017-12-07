@@ -1,5 +1,5 @@
 @include('layouts.style')
-<title>All Taxonomies</title>
+<title>All Categories</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="../css/treeview.css" rel="stylesheet">
