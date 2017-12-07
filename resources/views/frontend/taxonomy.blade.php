@@ -20,14 +20,13 @@
             <!--BEGIN TITLE & BREADCRUMB PAGE-->
             <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                 <div class="page-header pull-left">
-                    <div class="page-title">
+                    <div class="page-title plxxl">
                         Category</div>
                 </div>
                 <div class="sharethis-inline-share-buttons col-md-4"></div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
-                    <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                    <li class="hidden"><a href="#">Dashboard</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                    <li class="active">Dashboard</li>
+                    <li><i class="fa fa-edit"></i>&nbsp;<a href="/category">Categories</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="active">{{$taxonomy->name}}</li>
                 </ol>
                 <div class="clearfix">
                 </div>
@@ -45,7 +44,7 @@
                     </div>
 
                     <div>
-                    <button class="cornsilk btn-blue" style="margin-top: 20px;">
+                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: 0px;">
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="font-size: 25px;color: #333;"></i></a>
                     </button>
                         <div class="page-content">

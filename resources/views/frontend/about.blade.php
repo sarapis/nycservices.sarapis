@@ -1,5 +1,5 @@
 @include('layouts.style')
-<title>Index | Index</title>
+<title>About</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="../css/treeview.css" rel="stylesheet">
@@ -23,13 +23,11 @@
             <!--BEGIN TITLE & BREADCRUMB PAGE-->
             <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                 <div class="page-header pull-left">
-                    <div class="page-title">
+                    <div class="page-title plxxl">
                         Home</div>
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
-                    <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                    <li class="hidden"><a href="#">Dashboard</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                    <li class="active">Dashboard</li>
+                    <li><i class="fa  fa-info-circle"></i>&nbsp;<a href="/about">About</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
                 </ol>
                 <div class="clearfix">
                 </div>
@@ -47,7 +45,7 @@
                     </div>
 
                     <div>
-                    <button class="cornsilk btn-blue" style="margin-top: 20px;">
+                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: 0px;">
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="color: #333;"></i></a>
                     </button>
                         <div class="page-content">
