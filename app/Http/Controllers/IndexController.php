@@ -50,8 +50,7 @@ class IndexController extends Controller
         $organization_name = '&nbsp;';
         $service_type_name = '&nbsp;';
         $filter = collect([$service_type_name, $location_name, $organization_name, $service_name]);
-        $location_map = Location::all();
-        return view('frontend.home', compact('posts','taxonomies','allTaxonomies','services','locations','organizations', 'taxonomys','filter', 'location_map'));
+        return view('frontend.home', compact('posts','taxonomies','allTaxonomies','services','locations','organizations', 'taxonomys','filter'));
     }
  
 
