@@ -2,6 +2,7 @@
 <title>Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="../css/treeview.css" rel="stylesheet">
 <div>
 
@@ -45,9 +46,10 @@
                     </div>
 
                     <div>
-                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: auto;">
-                        <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="color: #333;"></i></a>
+                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: auto;" id="menu-toggle">
+                        <a href="" class="btn btn-secondary" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="color: #333;"></i></a>
                     </button>
+                   
                         <div class="page-content">
                             <div class="row">
                                 <div class="col-lg-12">

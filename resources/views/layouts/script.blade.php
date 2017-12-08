@@ -54,8 +54,10 @@
 
 </script>
 <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
+$(document).ready(function(){
+    $("#menu-toggle").click(function(event) {
         $("#wrapper").toggleClass("toggled");
+        event.preventDefault();
     });
+});
 </script>
