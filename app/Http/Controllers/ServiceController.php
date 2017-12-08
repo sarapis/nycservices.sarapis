@@ -111,7 +111,8 @@ class ServiceController extends Controller
             ->orwhere('organizations.name', 'like', '%'.$find.'%')
             ->orwhere('taxonomies.name', 'like', '%'.$find.'%')
             ->get();
-        return view('frontend.services', compact('services','locations','organizations', 'taxonomys','service_name','filter','services_all'));
+        $location_map = DB::table('locations')->leftjoin('address', 'locations.address', 'like', DB::raw("concat('%', address.address_id, '%')"))->get();
+        return view('frontend.services', compact('services','locations','organizations', 'taxonomys','service_name','filter','services_all', 'location_map'));
     }
 
     /**
