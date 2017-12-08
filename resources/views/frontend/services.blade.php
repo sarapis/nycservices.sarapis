@@ -46,7 +46,7 @@
                     </button>
                         <div class="page-content">
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-8" style="padding: 0;">
                                     <div class="panel">
                                         <div class="panel-body">
                                             <div id="grid-layout-table-1" class="box jplist">
@@ -139,6 +139,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-4" style="padding: 0;">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            <div id="mymap" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -158,3 +165,29 @@
     <!--END PAGE WRAPPER-->
 </div>
 @include('layouts.script')
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5XHJ6oNL9-qh0XsL0G74y1xbcxNGkSxw&callback=initMap"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+ <script type="text/javascript">
+
+    var locations = <?php print_r(json_encode($locations)) ?>;
+
+    var mymap = new GMaps({
+      el: '#mymap',
+      lat: 40.712722,
+      lng: -74.006058,
+      zoom:10
+    });
+
+    $.each( locations, function( index, value ){
+        mymap.addMarker({
+          lat: value.latitude,
+          lng: value.longitude,
+          title: value.name,
+
+        infoWindow: {
+            content: (value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code)
+        }
+        });
+   });
+
+  </script>
