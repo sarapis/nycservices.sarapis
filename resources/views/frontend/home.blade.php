@@ -132,7 +132,7 @@
           title: value.name,
          
         infoWindow: {
-            content: ('<a href="location_'+value.location_id+'">'+value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code + '</a>')
+            content: ('<a href="location_'+value.location_id+'">'+value.name+'</a></br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code)
         }
 
         });
