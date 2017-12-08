@@ -50,7 +50,7 @@
                                     <div class="panel">
                                         <div class="panel-body">
                                             <div id="grid-layout-table-1" class="box jplist">
-                                                <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
+                                                <div class="jplist-ios-button"><i class="fa fa-sort"></i> Display Options</div>
                                                 <div class="jplist-panel box panel-top">
                                                     <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Reset<i class="fa fa-share mls"></i></button>
                                                     <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">

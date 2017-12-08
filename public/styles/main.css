@@ -7608,3 +7608,12 @@ iframe {
     left: 0 !important;
   }
 }
+#st-1.st-animated {
+    clear: both !important;
+}
+
+@media (min-width: 480px) {
+  #st-1.st-animated {
+    clear: initial !important;
+  }
+}
