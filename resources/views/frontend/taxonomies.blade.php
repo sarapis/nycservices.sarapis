@@ -53,7 +53,7 @@
                                     <div class="panel">
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     
                                                     <ul id="tree1">
                                                         @foreach($taxonomies as $taxonomy)
@@ -65,6 +65,9 @@
                                                             </li>
                                                         @endforeach
                                                     </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div id="mymap" style="width: 100%;"></div>
                                                 </div>
                                             </div>                            
                                         </div>
@@ -90,3 +93,29 @@
 </div>
 @include('layouts.script')
 <script src="../js/treeview.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5XHJ6oNL9-qh0XsL0G74y1xbcxNGkSxw&callback=initMap"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+ <script type="text/javascript">
+
+    var locations = <?php print_r(json_encode($locations)) ?>;
+
+    var mymap = new GMaps({
+      el: '#mymap',
+      lat: 40.712722,
+      lng: -74.006058,
+      zoom:10
+    });
+
+    $.each( locations, function( index, value ){
+        mymap.addMarker({
+          lat: value.latitude,
+          lng: value.longitude,
+          title: value.name,
+
+        infoWindow: {
+            content: (value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code)
+        }
+        });
+   });
+
+  </script>
