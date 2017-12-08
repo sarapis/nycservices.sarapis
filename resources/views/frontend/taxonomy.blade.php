@@ -44,7 +44,7 @@
                     </div>
 
                     <div>
-                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: 0px;">
+                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left:auto;">
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="font-size: 25px;color: #333;"></i></a>
                     </button>
                         <div class="page-content">
@@ -57,7 +57,7 @@
                                                 <h4 class="box-heading" style="font-size: 25px;">{{$taxonomy->name}}</h4>
                                             </div>
                                             <div id="grid-layout-table-1" class="box jplist">
-                                                <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
+                                                <div class="jplist-ios-button"><i class="fa fa-sort"></i>Display Options</div>
                                                 <div class="jplist-panel box panel-top">
                                                     <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Reset<i class="fa fa-share mls"></i></button>
                                                     <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
