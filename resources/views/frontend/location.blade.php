@@ -217,15 +217,10 @@
       zoom:18
     });
 
-
         mymap.addMarker({
           lat: latitude,
           lng: longitude,
           title: name,
-          click: function(e) {
-            
-            window.location.replace('location_'+value.location_id);
-          },
           infoWindow: {
               content: (name+'</br>' +address_1+', ' +city+', '+state_province+', '+postal_code)
         }

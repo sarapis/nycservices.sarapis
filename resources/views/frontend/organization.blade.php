@@ -222,14 +222,9 @@
           lat: value.latitude,
           lng: value.longitude,
           title: value.name,
-          click: function(e) {
-            
-            window.location.replace('location_'+value.location_id);
-          },
           infoWindow: {
-              content: (value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code)
-            }
-        });
+            content: ('<a href="location_'+value.location_id+'">'+value.name+'</br>' +value.address_1+', ' +value.city+', '+value.state_province+', '+value.postal_code + '</a>')
+        }
    });
 
   </script>
