@@ -50,7 +50,8 @@ class IndexController extends Controller
         $organization_name = '&nbsp;';
         $service_type_name = '&nbsp;';
         $filter = collect([$service_type_name, $location_name, $organization_name, $service_name]);
-        return view('frontend.home', compact('posts','taxonomies','allTaxonomies','services','locations','organizations', 'taxonomys','filter'));
+        $location_map = DB::table('locations')->leftjoin('address', 'locations.address', 'like', DB::raw("concat('%', address.address_id, '%')"))->get();
+        return view('frontend.home', compact('posts','taxonomies','allTaxonomies','services','locations','organizations', 'taxonomys','filter', 'location_map'));
     }
  
 

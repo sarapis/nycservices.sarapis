@@ -34,8 +34,8 @@ class LocationController extends Controller
         $filter = collect([$service_type_name, $location_name, $organization_name, $service_name]);
 
         $locations_all = DB::table('locations')->leftjoin('phones', 'locations.phones', 'like', DB::raw("concat('%', phones.phone_id, '%')"))->select('locations.*', DB::raw('group_concat(phones.phone_number) as phone_numbers'))->groupBy('locations.id')->leftjoin('organizations', 'locations.organization', 'like', DB::raw("concat('%', organizations.organization_id, '%')"))->leftjoin('services', 'locations.services', 'like', DB::raw("concat('%', services.service_id, '%')"))->select('locations.*', DB::raw('group_concat(phones.phone_number) as phone_numbers'), DB::raw('organizations.name as organization_name'), DB::raw('services.name as service_name'))->get();
-
-        return view('frontend.locations', compact('services','locations','organizations', 'taxonomys','filter','locations_all'));
+        $location_map = DB::table('locations')->leftjoin('address', 'locations.address', 'like', DB::raw("concat('%', address.address_id, '%')"))->get();
+        return view('frontend.locations', compact('services','locations','organizations', 'taxonomys','filter','locations_all', 'location_map'));
     }
 
     /**
