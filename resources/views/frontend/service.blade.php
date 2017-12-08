@@ -45,8 +45,8 @@
                     </div>
 
                     <div>
-                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left:auto;">
-                        <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="font-size: 25px;color: #333;"></i></a>
+                    <button class="cornsilk btn-blue" style="position: absolute;top: 7px;left: auto;" id="menu-toggle">
+                        <a href="" class="btn btn-secondary" style="padding: 0px;font-size: 25px;"><i class="fa  fa-search" style="color: #333;font-size: 25px;"></i></a>
                     </button>
                         <div class="page-content">
                             <div class="row">
