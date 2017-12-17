@@ -148,7 +148,7 @@
 								echo '</li>';
 
 								$name = str_replace("'","\'",$record['fields']['name']);
-								$organizations = implode(",", $record['fields']['organizations']);		
+								$organization = implode(",", $record['fields']['organizations']);		
 								$services = implode(",", $record['fields']['services']);
 								$phones = implode(",", $record['fields']['phones']);
 
